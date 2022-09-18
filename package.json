@@ -1,0 +1,44 @@
+{
+  "name": "screeps-all-api",
+  "version": "1.0.0",
+  "description": "A vite plugin make import rely from CDN easier",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "dev": "npm run build -- --watch",
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "publish": "tsup src/index.ts --dts --format cjs,esm && npm publish"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttxs25830/screeps-all-api.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "cdn",
+    "import",
+    "vite",
+    "plugin"
+  ],
+  "author": "ttxs25830 <wza25830@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ttxs25830/screeps-all-api/issues"
+  },
+  "homepage": "https://github.com/ttxs25830/screeps-all-api#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.14",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {}
+}
