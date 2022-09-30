@@ -9,6 +9,7 @@ export default class WebsocketApi extends URLApiBase {
   }
   // Base
   private conn: WebSocket;
+  private pinger: NodeJS.Timer | undefined;
   public get status() {
     if (this.conn.readyState > 1) {
       return "error";
@@ -37,14 +38,17 @@ export default class WebsocketApi extends URLApiBase {
       this.startAuth();
     };
     this.conn.onerror = (ev) => {
+      clearInterval(this.pinger)
       throw new Error(`Connect closed on error ${ev.message}`);
     };
     this.conn.onmessage = (ev) => {
       this.handleData(ev.data.toString());
     };
+    this.pinger = setInterval(() => this.conn.send("ping"), 60000)
   }
   public close() {
     this.conn.close();
+    clearInterval(this.pinger)
   }
   // Auth
   public readonly token: string;

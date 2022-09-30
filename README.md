@@ -1,7 +1,7 @@
 # screeps-all-api
-# Http Api
-## HttpScreepsApi.raw
-### Example
+## Http Api
+### HttpScreepsApi.raw
+#### Example
 ```javescript
 const token = "Your Token Here"
 const baseURL = "https://screeps.com"
@@ -11,8 +11,8 @@ async function getAccountId() {
 getAccountId().then(console.log)
 // This code will print your account id on console
 ```
-## HttpScreepsApi.authByPW
-### Example
+### HttpScreepsApi.authByPW
+#### Example
 ```javescript
 const baseURL = "https://screeps.com"
 async function getAccountId() {
@@ -22,9 +22,9 @@ async function getAccountId() {
 getAccountId().then(console.log)
 // This code will print your account id on console
 ```
-# WebSocket Api
-## WSScreepsApi.rawOnce
-### Example
+## WebSocket Api
+### WSScreepsApi.rawOnce
+#### Example
 ```javescript
 const baseURL = "wss://screeps.com"
 const baseURL2 = "https://screeps.com"
@@ -38,8 +38,8 @@ async function getAccountId() {
 getAccountId().then(console.log)
 // This code will print your cpu usage for last game tick
 ```
-## WSScreepsApi.rawListen && WSScreepsApi.rawUnlisten
-### Example
+### WSScreepsApi.rawListen && WSScreepsApi.rawUnlisten
+#### Example
 ```javescript
 const baseURL = "wss://screeps.com"
 const baseURL2 = "https://screeps.com"
