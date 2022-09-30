@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-        "module": "ESNext",
-        "target": "es2017",
+        "module": "CommonJS",
+        "target": "ESNext",
         "forceConsistentCasingInFileNames": true,
         "lib": ["ESNext", "DOM"],
         "esModuleInterop": true,
@@ -11,5 +11,6 @@
         "resolveJsonModule": true,
         "skipLibCheck": true
     },
-    "exclude": ["**/dist", "**/node_modules", "**/test"]
+    "exclude": ["**/dist", "**/node_modules", "**/test"],
+    "include": ["src/**/*"]
 }
